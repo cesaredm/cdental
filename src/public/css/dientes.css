@@ -1,0 +1,396 @@
+
+.btnAgregarCita{
+    position: fixed;
+    top: 86%;
+    margin-left: 80%;
+    z-index: 2;
+}
+#icon-add-expediente{
+    position: fixed;
+    top: 86%;
+    margin-left: 77%;
+    z-index: 2;
+}
+.iconProceso{
+    width: 32px;
+}
+.diente{
+    width: 5.4%; /*equivale a 36px*/
+}
+.diente:hover{
+    /* filter: drop-shadow(2px 3px 3px #383838); */
+}
+.numeracion{
+    display: inline-block;
+    text-align: center;
+    width: 5.4%;
+}
+.diente span{
+    position: absolute;
+    margin: -5% 0px 0px .5%;
+    z-index: 2;
+    font-size: 500%;
+    color: red;
+}
+.listaUsers{
+    height: 200px;
+    overflow: auto;
+}
+.content-superficies-top{
+    position: relative;
+    height: 30px;
+    margin-top: 0;
+    background-color: #fff;
+}
+.content-superficies-bottom{
+    position: relative;
+    height: 30px;
+    background-color: #fff;
+}
+
+/* diseño de las superficies de los dientes */
+
+/* 5 superficies */
+.s1de5Color{
+    position: absolute;
+    width: 36px;
+    border-top: 9px solid #fc1b58;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+}
+.s1de5{
+    position: absolute;
+    width: 36px;
+    border-top: 9px solid #428bca;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+}
+.s2de5Color{
+    position: absolute;
+    width: 9px;
+    height: 30px;
+    margin-left: 27px;
+    border-right: 9px solid #fc1b58;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+}
+.s2de5{
+    position: absolute;
+    width: 9px;
+    height: 30px;
+    margin-left: 27px;
+    border-right: 9px solid #428bca;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+}
+.s3de5Color{
+    position: absolute;
+    width: 36px;
+    margin-top: 21px;
+    border-bottom: 9px solid #fc1b58;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+}
+.s3de5{
+    position: absolute;
+    width: 36px;
+    margin-top: 21px;
+    border-bottom: 9px solid #428bca;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+}
+.s4de5Color{
+    position: absolute;
+    width: 9px;
+    height: 30px;
+    border-left: 9px solid #fc1b58;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+}
+.s4de5{
+    position: absolute;
+    width: 9px;
+    height: 30px;
+    border-left: 9px solid #428bca;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+}
+.s5de5Color{
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #fc1b58;
+
+}
+.s5de5{
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #428bca;
+
+}
+/* 4 superficies */
+.s1de4Color{
+    position: absolute;
+    border-top: 14px solid #fc1b58;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    width: 36px; 
+}
+.s1de4{
+    position: absolute;
+    border-top: 14px solid #428bca;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    width: 36px; 
+}
+.s2de4Color{
+    position: absolute;
+    border-right: 15px solid #fc1b58;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    margin-left: 21px;
+}
+.s2de4{
+    position: absolute;
+    border-right: 15px solid #428bca;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    margin-left: 21px;
+}
+.s3de4Color{
+    position: absolute;
+    border-bottom: 15px solid #fc1b58;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    width: 36px;
+    margin-top: 15px;
+}
+.s3de4{
+    position: absolute;
+    border-bottom: 15px solid #428bca;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    width: 36px;
+    margin-top: 15px;
+}
+.s4de4Color{
+    position: absolute;
+    border-left: 15px solid #fc1b58;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+.s4de4{
+    position: absolute;
+    border-left: 15px solid #428bca;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+/* hover 5 superficies */
+.s1de5:hover{
+    border-top-color: #71afe6;
+}
+.s2de5:hover{
+    border-right-color: #71afe6;
+}
+.s3de5:hover{
+    border-bottom-color: #71afe6;
+}
+.s4de5:hover{
+    border-left-color: #71afe6;
+}
+.s5de5:hover{
+    background-color: #71afe6;
+}
+/* hover 4 superficies */
+.s1de4:hover{
+    border-top-color: #71afe6;
+}
+.s2de4:hover{
+    border-right-color: #71afe6;
+}
+.s3de4:hover{
+    border-bottom-color: #71afe6;
+}
+.s4de4:hover{
+    border-left-color: #71afe6;
+}
+
+/* Coronas */
+.s1de5Corona{
+    position: absolute;
+    width: 36px;
+    border-top: 9px solid #ff8000;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+}
+.s2de5Corona{
+    position: absolute;
+    width: 9px;
+    height: 30px;
+    margin-left: 27px;
+    border-right: 9px solid #ff8000;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+} 
+.s3de5Corona{
+    position: absolute;
+    width: 36px;
+    margin-top: 21px;
+    border-bottom: 9px solid #ff8000;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+} 
+.s4de5Corona{
+    position: absolute;
+    width: 9px;
+    height: 30px;
+    border-left: 9px solid #ff8000;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+} 
+.s5de5Corona{
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #ff8000;
+}
+
+.s1de4Corona{
+    position: absolute;
+    border-top: 14px solid #ff8000;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    width: 36px; 
+}
+.s2de4Corona{
+    position: absolute;
+    border-right: 15px solid #ff8000;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    margin-left: 21px;
+}
+.s3de4Corona{
+    position: absolute;
+    border-bottom: 15px solid #ff8000;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    width: 36px;
+    margin-top: 15px;
+}
+.s4de4Corona{
+    position: absolute;
+    border-left: 15px solid #ff8000;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+/* blanquiamientos*/
+.s1de5Blanquiamientos{
+    position: absolute;
+    width: 36px;
+    border-top: 9px solid purple;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+}
+.s2de5Blanquiamientos{
+    position: absolute;
+    width: 9px;
+    height: 30px;
+    margin-left: 27px;
+    border-right: 9px solid purple;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+} 
+.s3de5Blanquiamientos{
+    position: absolute;
+    width: 36px;
+    margin-top: 21px;
+    border-bottom: 9px solid purple;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+} 
+.s4de5Blanquiamientos{
+    position: absolute;
+    width: 9px;
+    height: 30px;
+    border-left: 9px solid purple;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+} 
+.s5de5Blanquiamientos{
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: purple;
+}
+
+.s1de4Blanquiamientos{
+    position: absolute;
+    border-top: 14px solid purple;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    width: 36px; 
+}
+.s2de4Blanquiamientos{
+    position: absolute;
+    border-right: 15px solid purple;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    margin-left: 21px;
+}
+.s3de4Blanquiamientos{
+    position: absolute;
+    border-bottom: 15px solid purple;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    width: 36px;
+    margin-top: 15px;
+}
+.s4de4Blanquiamientos{
+    position: absolute;
+    border-left: 15px solid purple;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+/* Carillas */
+.s1de5Carilla{
+    position: absolute;
+    width: 36px;
+    border-top: 9px solid pink;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+}
+.s1de4Carilla{
+    position: absolute;
+    border-top: 14px solid pink;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    width: 36px; 
+}
+.s3de5Carilla{
+    position: absolute;
+    width: 36px;
+    margin-top: 21px;
+    border-bottom: 9px solid pink;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+}
+.s3de4Carilla{
+    position: absolute;
+    border-bottom: 15px solid pink;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    width: 36px;
+    margin-top: 15px;
+}

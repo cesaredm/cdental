@@ -1,0 +1,76 @@
+/* TABlETAS */
+@media (max-width:768px){
+    .menuLateral{
+        margin-left: -100%;
+        margin-top: -5px;
+        z-index: 2;
+    }
+    .menuResponsive{
+        display: block;
+    }
+    .vista{
+        margin: 0;
+        width: 100%;
+    }
+    .menu li a {
+        color: white;
+        font-size: 7px;
+    }
+    .searchExpediente .card-body{
+        height: 150px;
+        font-size: 10px;
+        overflow: auto;
+    }
+    .infoPersonalExpediente{
+        height: 142px;
+        overflow: auto;
+    }
+    #infoMedica{
+        height: 150px;
+        overflow: auto;
+    }
+    #citasDiagnostico{
+        height: 200px;
+    }
+    #dentistas{
+        height: 94%;
+        overflow: auto;
+    }
+    #adminUsers{
+        height: 94%;
+        overflow: auto;
+    }
+    #notificaciones{
+        height: 94%;
+        overflow: auto;
+    }
+    #searchExpediente{
+        display:none;
+    }
+    #searchOculto{
+        display: block;
+        position: absolute;
+        margin-top: -25%;
+        margin-left: 90.5%;
+        background-color: white;
+        border-radius: 32px;
+        padding: 10px;
+    }
+    #icon-add-expediente{
+        margin-left: 86%;
+    }
+    
+}
+
+/* TELEFONO SMALL DE 320PX */
+@media (min-width:320px) and (max-width:425px){
+    .menuLateral{
+        width: 40%;
+    }
+    #menu-diagnostico{
+        display: none;
+    }
+    #citas{
+        overflow-x: auto;
+    }
+}

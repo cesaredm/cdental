@@ -1,0 +1,282 @@
+<div class="container-fluid">
+    <!-- restauracionesMolaresSuperior -->
+    <div class="modal fade" id="restauracionesMolaresSuperior" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body rounded">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-modal-procesos">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#Resina" role="tab" aria-controls="home" aria-selected="true">Resina</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#IncrustacionResina" role="tab" aria-controls="profile" aria-selected="false">Incrustación de Resina</a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="Resina" role="tabpanel" aria-labelledby="home-tab">
+                                    <form action="" id="form-resina-superficie-molar-superior">
+                                        <input type="hidden" name="" id="procesoResina" value="Resina">
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie palatina" class="form-check-input" name="palatina-superior" id="palatina-superior"><label for="">Palatina</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie vestibular" class="form-check-input" name="vestibular-superior" id="vestibular-superior"><label for="">Vestibular</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie mesial" class="form-check-input" name="mesial-superior" id="mesial-superior"><label for="">Mesial</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie distal" class="form-check-input" name="distal-superior" id="distal-superior"><label for="">Distal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie oclusal" class="form-check-input" name="oclusal-superior" id="oclusal-superior"><label for="">Oclusal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary btn-sm btn-block" id="btn-guardar-superficies-resina">Guardar</button>
+                                        </div>
+                                    </form>
+                                    
+                                </div>
+                                <div class="tab-pane fade" id="IncrustacionResina" role="tabpanel" aria-labelledby="contact-tab">
+                                    <form id="form-incrustacion-superficie-molar-superior" action="">
+                                        <input type="hidden" name="" id="procesoIResina" value="Resina">
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie palatina" class="form-check-input" name="Incrustación de resina en superficie palatina" id="IRpalatina-superior"><label for="">Palatina</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie vestibular" class="form-check-input" name="Incrustación de resina en superficie vestibular" id="IRvestibular-superior"><label for="">Vestibular</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie mesial" class="form-check-input" name="Incrustación de resina en superficie mesial" id="IRmesial-superior"><label for="">Mesial</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie distal" class="form-check-input" name="Incrustación de resina en superficie distal" id="IRdistal-superior"><label for="">Distal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie oclusal" class="form-check-input" name="Incrustación de resina en superficie oclusal" id="IRoclusal-superior"><label for="">Oclusal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary btn-sm btn-block" id="btn-guardar-superficies-IR">Guardar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- restauracionesMolaresInferior -->
+    <div class="modal fade" id="restauracionesMolaresInferior" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body rounded">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-modal-procesos">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <a class="nav-link active" id="ResinaMolaresInferior-tab" data-toggle="tab" href="#ResinaMolaresInferior" role="tab" aria-controls="home" aria-selected="true">Resina</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <a class="nav-link" id="IncrustacionResinaMolaresInferior-tab" data-toggle="tab" href="#IncrustacionResinaMolaresInferior" role="tab" aria-controls="profile" aria-selected="false">Incrustación de Resina</a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="ResinaMolaresInferior" role="tabpanel" aria-labelledby="ResinaMolaresInferior-tab">
+                                    <form action="" id="guardar-superficies-molares-inferiores">
+                                        <input type="hidden" name="" id="procesoResinaMolaresInferiores" value="Resina">
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie lingual" class="form-check-input" name="" id="lingual-resina-molar-inferior"><label for="">Lingual</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie vestibular" class="form-check-input" name="" id="vestibular-resina-molar-inferior"><label for="">Vestibular</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie mesial" class="form-check-input" name="" id="mesial-resina-molar-inferior"><label for="">Mesial</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie distal" class="form-check-input" name="" id="distal-resina-molar-inferior"><label for="">Distal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie oclusal" class="form-check-input" name="" id="oclusal-resina-molar-inferior"><label for="">Oclusal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary btn-sm btn-block">Guardar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="IncrustacionResinaMolaresInferior" role="tabpanel" aria-labelledby="IncrustacionResinaMolaresInferior-tab">
+                                    <form action="" id="guardar-IRsuperficies-molares-inferiores">
+                                        <input type="hidden" name="" id="procesoIR-molares-inferiores" value="Resina">
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina superficie lingual" class="form-check-input" name="" id="lingual-IR-molar-inferior"><label for="">Lingual</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie vestibular" class="form-check-input" name="" id="vastibular-IR-molar-inferior"><label for="">Vestibular</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie mesial" class="form-check-input" name="" id="mesial-IR-molar-inferior"><label for="">Mesial</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie distal" class="form-check-input" name="" id="distal-IR-molar-inferior"><label for="">Distal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie oclusal" class="form-check-input" name="" id="oclusal-IR-molar-inferior"><label for="">Oclusal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary btn-sm btn-block">Guardar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- restauraciones incisivo y caninos Superior -->
+    <div class="modal fade" id="restauracionesIncisivoSuperior" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body rounded">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-modal-procesos">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <a class="nav-link active" id="ResinaIncisivoSuperior-tab" data-toggle="tab" href="#ResinaIncisivoSuperior" role="tab" aria-controls="home" aria-selected="true">Resina</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <a class="nav-link" id="IncrustacionResinaIncisivoSuperior-tab" data-toggle="tab" href="#IncrustacionResinaIncisivoSuperior" role="tab" aria-controls="profile" aria-selected="false">Incrustación de Resina</a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="ResinaIncisivoSuperior" role="tabpanel" aria-labelledby="ResinaIncisivoSuperior-tab">
+                                    <form action="" id="guardar-superficies-incisivos-superior">
+                                        <input type="hidden" name="" id="procesoResinaSuperior" value="Resina">
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie palatina" class="form-check-input" name="" id="palatina-incisivo-superior"><label for="">Palatina</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie vestibular" class="form-check-input" name="" id="vestibular-incisivo-superior"><label for="">vestibular</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie mesial" class="form-check-input" name="" id="mesial-incisivo-superior"><label for="">Mesial</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie distal" class="form-check-input" name="" id="distal-incisivo-superior"><label for="">Distal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary btn-sm btn-block">Guardar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="IncrustacionResinaIncisivoSuperior" role="tabpanel" aria-labelledby="IncrustacionResinaIncisivoSuperior-tab">
+                                    <form action="" id="guardar-IRincisivo-superior">
+                                        <input type="hidden" name="" id="proceosIResianSuperior" value="Resina">
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie palatina" class="form-check-input" name="" id="IRpalatina-incisivo-superior"><label for="">Palatina</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie vestibular" class="form-check-input" name="" id="IRvestibular-incisivo-superior"><label for="">Labial</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie mesial" class="form-check-input" name="" id="IRmesial-incisivo-superior"><label for="">Mesial</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie distal" class="form-check-input" name="" id="IRdistal-incisivo-superior"><label for="">Distal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary btn-sm btn-block">Guardar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- restauraciones incisivo y caninos inferior -->
+    <div class="modal fade" id="restauracionesIncisivoInferior" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body rounded">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-modal-procesos">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <a class="nav-link active" id="ResinaIncisivoInferior-tab" data-toggle="tab" href="#ResinaIncisivoInferior" role="tab" aria-controls="home" aria-selected="true">Resina</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <a class="nav-link" id="IncrustacionResinaIncisivoInferior-tab" data-toggle="tab" href="#IncrustacionResinaIncisivoInferior" role="tab" aria-controls="profile" aria-selected="false">Incrustación de Resina</a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="ResinaIncisivoInferior" role="tabpanel" aria-labelledby="ResinaIncisivoInferior-tab">
+                                    <form action="" id="guardar-superficies-incisivos-inferiores">
+                                        <input type="hidden" name="" id="proceso-resina-incisivos-inferiores" value="Resina">
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie lingual" class="form-check-input" name="" id="lingual-resina-incisivo-inferior"><label for="">Lingual</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie vestibular" class="form-check-input" name="" id="vestibular-resina-incisivo-inferior"><label for="">Vestibular</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie mesial" class="form-check-input" name="" id="mesial-resina-incisivo-inferior"><label for="">Mesial</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Resina en superficie distal" class="form-check-input" name="" id="distal-resina-incisivo-inferior"><label for="">Distal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary btn-sm btn-block">Guardar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="IncrustacionResinaIncisivoInferior" role="tabpanel" aria-labelledby="IncrustacionResinaIncisivoInferior-tab">
+                                    <form action="" id="guardar-IResina-incisivos-inferior">
+                                        <input type="hidden" name="" id="procesoIR-incisivos-inferior" value="Resina">
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie lingual" class="form-check-input" name="" id="lingual-IR-incisivo-inferior"><label for="">Lingual</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie vestibular" class="form-check-input" name="" id="vestibular-IR-incisivo-inferior"><label for="">Vestibular</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie mesial" class="form-check-input" name="" id="mesial-IR-incisivo-inferior"><label for="">Mesial</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="Incrustación de resina en superficie distal" class="form-check-input" name="" id="distal-IR-incisivo-inferior"><label for="">Distal</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary btn-sm btn-block">Guardar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

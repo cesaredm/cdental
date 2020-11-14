@@ -1,0 +1,34 @@
+<div class="container" id="notificaciones">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card card-notificaciones">
+                <div class="card-header">
+                    <h4 class="card-title text-center">Crear Mensaje.</h4>
+                </div>
+                <div class="card-body">
+                    <form action="" id="enviarNotificacion">
+                        <div class="form-group">
+                            <textarea name="mensaje" id="mensaje" class="form-control" cols="30" rows="5" placeholder="Mensaje" required autocomplete="off"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="remitente" id="remitente" class="form-control" required placeholder="Remitente">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card card-notificaciones">
+                <div class="card-header pb-1">
+                    <h6 class="text-center" id="mostrar-notificaciones"><a href="#">Mostrar citas para mañana</a></h6>
+                </div>
+                <div class="card-body" id="citasTomorrow">
+                    <!-- citas -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

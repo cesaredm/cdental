@@ -1,0 +1,270 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f3; 
+}
+#grupo-cuadrantes{
+    display: none;
+}
+/* style menu responsivo*/
+.menuResponsive{
+    display: none;
+    background-color: #47485a;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+#searchOculto{
+    display: none;
+}
+.menuResponsive span{
+    float: right;
+}
+/*----------------------------*/
+#diagnostico, #adminUsers, #dentistas, #notificaciones{
+    display: none;
+} 
+
+.btn-show-menu{
+    display: none;
+}
+
+.dropdown-item:hover{
+    background-color: #0181b0;
+}
+.menuLateral{
+    /* background-color: #383838; */
+    background-color: #47485a;
+    position: fixed;
+    width: 10%;
+    height: 100%;
+    /* margin-top: 0.5%; */
+    /* margin-left: .5%; */
+    margin-right: 0;
+    /* border-radius: 16px 16px; */
+}
+.menuLateral ul li .nav-link:hover{
+    color: rgb(105, 151, 238);
+}
+.vista{
+    position: fixed;
+    margin-left: 10%;
+    width: 90%;
+    height: 98%;
+    margin-top: 0.5%;
+}
+.vista .container{
+    padding: 1%;
+}
+.navbar{
+    box-shadow: none;
+}
+.content-nav .user{
+    width: 100%;
+}
+.content-nav .icon-user{
+    display: block;
+    width: 100%;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+}
+.menu{
+    text-align: center;
+    width: 100%;
+    /* margin-left: 3%; */
+}
+.menu li.active a{
+    background-color: #414252; 
+    border-left: 5px solid #0181b0;
+    color: rgb(105, 151, 238);
+}
+.menu li a {
+    color: white;
+    font-size: 10px;
+}
+.menu li{
+    width: 100%;
+    /* font-size: 11px; */
+}
+.menu li a span{
+    margin: 0 0 0 0%;
+    font-size: 20px;
+}
+.user{
+    padding: 10% 0% ;
+    border-bottom: 3px solid #414252;
+}
+.card-dentadura, .searchExpediente{
+    background-color: #ecf0f3;
+    box-shadow: 8px 8px 8px #cbced1,
+                -8px -8px 8px #ffff;
+}
+/* .card-dentadura:hover{
+    box-shadow: 0px 0px 15px #585858;
+} */
+#citasDiagnostico{
+    background-image: url('../img/firmaDoctor.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 315px;
+    overflow-wrap: all;
+    overflow: auto; 
+}
+#list-citas-diagnostico{
+    position: absolute;
+    width: 100%;
+    height: 98%;
+    overflow: auto ;
+}
+.card-cita-expediente{
+    opacity: .9;
+    box-shadow: 8px 8px 8px #cbced1,
+                -8px -8px 8px #ffff;
+}
+.card-cita-expediente .card-body{
+    background-color: #ecf0f3;
+}
+.card-user{
+    box-shadow: 8px 8px 8px #cbced1,
+                -8px -8px 8px #ffff;
+    background-color: #ecf0f3;    
+}
+.btn-guardar-users, .btn-guardar-cita, .btn-guardar-expediente, .btn-guardar-proceso, .btn-guardar-dentista{
+    border-radius: 32px;
+    box-shadow: 8px 8px 8px #cbced1,
+                -8px -8px 8px #ffff;
+}
+.searchExpediente .card-body{
+    /* box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #ffff; */
+    height: 200px;
+    overflow: auto;
+}
+.anotacionesProccess{
+    display: none;
+}
+.content-list-dentist{
+    background-color: #ecf0f3;
+    box-shadow: 8px 8px 8px #cbced1,
+                -8px -8px 8px #ffff;
+}
+#infoMedica{
+    height: 250px;
+    overflow: auto;
+}
+#infoProcessExpediente{
+    position: absolute;
+    width: 96%;
+    height: 90%;
+    z-index: 3;
+    opacity: 1;
+    background-color: #fff;
+    border-radius: 5px 5px;
+    box-shadow: 8px 8px 8px #cbced1,
+                -8px -8px 8px #ffff;
+}
+.infoPersonalExpediente{
+    height: 250px;
+    overflow: auto;
+}
+#close-modal-infoProcessExpediente{
+    outline: none;
+}
+#close-modal-infoProcessExpediente:hover{
+    background-color: red;
+    color: white;
+    box-shadow: 0px 0px 10px #585858;
+    padding: 0px 0px 6px 0px;
+}
+.citasNotificacion{
+    border-radius: 32px;
+}
+.citasNotificacion:hover{
+    box-shadow: 0px 0px 15px #9898989d;
+    cursor: pointer;
+}
+.card-notificaciones{
+    background-color: #ecf0f3;
+    box-shadow: 8px 8px 8px #cbced1,
+                -8px -8px 8px #ffff;
+}
+
+.Iinferior, .posteNucleoInferior{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -10px;
+    width: 45px;
+}
+.Einferior{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -24px;
+    width: 80px;
+}
+.Isuperior{
+    position: absolute;
+    margin-top: 28px;
+    margin-left: -10px;
+    width: 45px;
+}
+
+.endodonciaMolarSuperior{
+    position: absolute;
+    margin-top: 33px;
+    margin-left: -5px;
+    width: 40px;
+}
+.endodonciaMolarInferior{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -5px;
+    width: 40px;
+}
+.endodonciaIncisivoInferior{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -7px;
+    width: 45px;
+}
+
+.endodonciaIncisivoSuperior{
+    position: absolute;
+    margin-top: 27px;
+    margin-left: -7px;
+    width: 45px;
+}
+
+.posteIncisivoInferior{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -7px;
+    width: 45px;
+}
+.posteIncisivoSuperior{
+    position: absolute;
+    margin-top: 27px;
+    margin-left: -7px;
+    width: 45px;
+}
+.extraccion{
+    position: absolute;
+    margin-top: 40px;
+    width: 30px;
+    height: 70px;
+    margin-left: 0px;
+}
+.extraccion-inferior{
+    position: absolute;
+    margin-top: 7px;
+    width: 30px;
+    height: 70px;
+}
+.limpieza{
+    /* filter: drop-shadow(2px 3px 3px #529bee); */
+    border: #0181b0;
+}
+
+#grupoCuadranteProtesis{
+    display: none;
+}

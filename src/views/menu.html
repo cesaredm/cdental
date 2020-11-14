@@ -1,0 +1,43 @@
+<%- include('partials/header.html') %>
+<nav class="bg-dark text-white btn-show-menu">Clinica Doctor<span class="icon-indent-right"></span></nav>
+<div class="contenedor">
+    <!-- MENU RESPONSIVO -->
+    <nav class="menuResponsive">
+        Menu
+        <span class="icon-list-bullet" id="menuBar"></span>
+    </nav>
+    <!-- MENU RESPONSIVO -->
+    <div class="icons">
+        
+    </div>
+    <!-- MENU LATERAL -->
+    <%- include('partials/menuLateral.html') %>
+    <div class="vista">
+        <!--    Dias de la semana   -->
+        <%-// include('partials/buscardor.html') %>
+        <!-- Citas -->
+        <%- include('partials/citas.html') %>
+        <!-- diagnostico -->
+        <%- include('partials/diagnostico.html') %>
+        <!-- dentistas -->
+        <%- include('partials/dentistas.html') %>
+        <!-- admin de usuarios -->
+        <%- include('partials/adminUsuarios.html') %>
+        <!-- notificaciones -->
+        <%- include('partials/notificaciones.html') %>
+    </div>
+</div>
+
+    <!-- modales -->
+    <%- include('partials/addCita.html') %>
+    <!-- modal para crear diagnostico -->
+    <%- include('partials/addDiagnostico.html') %>
+    <!-- modal para crear expediente -->
+    <%- include('partials/addExpediente.html') %>
+    <!-- modal para mostrar info de cita al dar click en el evento -->
+    <%- include('partials/infoCita.html') %>
+    <!-- modal de expediente -->
+    <%- include('partials/modalExpedientes.html') %>
+    <!-- modal de restauraciones -->
+    <%- include('partials/modalRestauraciones.html') %>
+<%- include('partials/footer.html') %> 

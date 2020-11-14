@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap/material.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/fontello/css/fontello.css">
+</head>
+<body>
+    <div class="container">
+        <% if(message){ %> 
+            <div class="row mt-2">
+                <div class="col-10 col-md-6 col-lg-4 mx-auto">
+                    <div class="alert alert-danger alert-dismissable fade show alerta-login" role="alert" id="<%= message %>">
+                        <%= message %> 
+                        <button class="close" data-dismiss="alert" aria-label="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <% } %> 
+        <div class="row">
+            <div class="col-10 col-md-6 col-lg-4 mx-auto col-login">
+                <div class="card border-0">
+                    <div class="card-header text-center">
+                        <h5 class="card-title text-center text-uppercase">
+                            Inicio de sesion
+                        </h5>
+                        <img src="img/logoClinicaLogin.png" class="card-img-top img-fluid" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="form">
+                            <form action="/login" method="POST" id="login">
+                                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                                <div class="form-group">
+                                    <input type="text" name="userName" class="form-control user" placeholder="Usuario" id="user" autocomplete="off" required autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="pass" class="form-control password" placeholder="Contrasena" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Acceder" class="btn btn-primary btn-block btn-login">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="js/alertaLogin.js"></script>
+</body>
+</html>

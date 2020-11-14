@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #ecf0f3;
+}
+.card{
+    background-color: #ecf0f3;
+    box-shadow: 13px 13px 20px #cbced1,
+                -13px -13px 20px #ffff;
+}
+.form-group{
+    box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #ffff;
+    border-radius: 32px;
+}
+.user, .password{
+    text-align: center;
+    border-radius: 32px;
+}
+.btn-login{
+    box-shadow: 13px 13px 20px #cbced1,
+                -13px -13px 20px #ffff;
+    border-radius: 32px;
+}
+.alerta-login{
+    display: none;
+}
