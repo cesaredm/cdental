@@ -38,10 +38,10 @@ app.use(session({
     resave:false,
     saveUninitialized:false,
     store: new MySQLStore({
-        host:'bjoraqzacwltasd8tins-mysql.services.clever-cloud.com',
-        user: 'udigwa8nmzk2vxqu',
-        password: 'xfm0bNCHhWd29s9dozOx',
-        database:'bjoraqzacwltasd8tins'
+        host:'localhost',
+        user: 'root',
+        password: '19199697tsoCD',
+        database:'clinica'
     })
 }));
 app.use(passport.initialize());

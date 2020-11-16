@@ -175,7 +175,7 @@ socket.on('cita:guardada', (citas) => {
         object = {
             title: cita.nombres + " " + cita.apellidos + " ->" + cita.anotaciones +" : "+ "Dr. "+ cita.nombresDentista +" "+ cita.apellidosDentista,
             text: cita.anotaciones,
-            start: moment(cita.fecha).format("YYYY-MM-DD") + " " + cita.horaInicio,
+            start: `${moment(cita.fecha).format("YYYY-MM-DD")} ${cita.horaInicio}`,
             end: moment(cita.fecha).format("YYYY-MM-DD") + " " + cita.horaFinal,
             id: cita.id,
             nombres: cita.nombres,
