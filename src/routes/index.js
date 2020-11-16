@@ -44,6 +44,7 @@ router.get('/showCitas',isLoggedIn ,async (req,res)=>{
         SELECT c.id,c.nombres,c.apellidos,telefono,fecha,horaInicio,horaFinal,anotaciones,correo,d.nombres as nombresDentista,
 	    d.apellidos as apellidosDentista,color FROM citas AS c LEFT JOIN dentistas as d on(c.dentista=d.id) `;
         const citas = await conexion.query(query);
+        console.log(citas);
         res.send(citas);
     } catch (error) {
         console.log(error);

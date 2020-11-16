@@ -211,14 +211,13 @@ document.querySelector('#form-save-cita').addEventListener('submit', (e) => {
 
 // mostrar las citas al entrar al sistema
 function showCitas() {
-    fetch('showCitas').then(citas => citas.json()).then(citas => {
+    fetch('/showCitas').then(citas => citas.json()).then(citas => {
         var object;
         citas.forEach(cita => {
-            
             object = {
                 title: cita.nombres + " " + cita.apellidos + " -> " + cita.anotaciones +" : "+ "Dr. "+ cita.nombresDentista +" "+ cita.apellidosDentista,
                 text: cita.anotaciones,
-                start: moment(cita.fecha).format("YYYY-MM-DD") + " " + cita.horaInicio,
+                start: `${moment(cita.fecha).format("YYYY-MM-DD")} ${cita.horaInicio}`,
                 end: moment(cita.fecha).format("YYYY-MM-DD") + " " + cita.horaFinal,
                 id: cita.id,
                 nombres: cita.nombres,
@@ -229,6 +228,7 @@ function showCitas() {
                 color: cita.color,
                 allDay:false
             }
+            console.log(object);
             calendar.addEvent(object);
         });
     });
