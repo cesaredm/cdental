@@ -2,19 +2,19 @@ const mysql = require('mysql');
 const { promisify } = require('util');
 
 //creo la conexion a bd
-/*const conexion = mysql.createPool({
+const conexion = mysql.createPool({
     host:'bjoraqzacwltasd8tins-mysql.services.clever-cloud.com',
     user: 'udigwa8nmzk2vxqu',
     password: 'xfm0bNCHhWd29s9dozOx',
     database:'bjoraqzacwltasd8tins'
-});*/
+});
 
-const conexion = mysql.createPool({
+/*const conexion = mysql.createPool({
     host:'localhost',
     user: 'root',
     password: '19199697tsoCD',
     database:'clinica'
-});
+});*/
 
 //obtengo la conexion y valido los errores
 conexion.getConnection((err, connection)=>{
