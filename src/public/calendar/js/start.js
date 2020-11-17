@@ -3,7 +3,8 @@ window.onload = () => {
     showCitasDiagnostico();
     resolucion();
 };
-
+//inicializar con la hora y fecha local
+moment().locale();
 //inicializacion de socketIO
 const socket = io();
 //variable para la instacia de calendario
@@ -208,7 +209,7 @@ document.querySelector('#form-save-cita').addEventListener('submit', (e) => {
     accion = true;
     document.getElementById('btn-guardar-cita').innerHTML = '<span class="icon-floppy"></span>Guardar';
 })
-
+//TODO arreglar la conversion de fecha
 // mostrar las citas al entrar al sistema
 function showCitas() {
     fetch('/showCitas').then(citas => citas.json()).then(citas => {

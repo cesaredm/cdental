@@ -11,6 +11,7 @@ const flash = require('connect-flash');
 const MySQLStore = require('express-mysql-session');
 const csrfProteccion = csrf({cookie:true});
 const passport = require('passport');
+const dbconfig = require('./dbconfig');
 
 //inicializaciones
 const app = express();
@@ -37,12 +38,7 @@ app.use(session({
     secret:'mySecretKey',
     resave:false,
     saveUninitialized:false,
-    store: new MySQLStore({
-        host:'bjoraqzacwltasd8tins-mysql.services.clever-cloud.com',
-        user: 'udigwa8nmzk2vxqu',
-        password: 'xfm0bNCHhWd29s9dozOx',
-        database:'bjoraqzacwltasd8tins'
-    })
+    store: new MySQLStore(dbconfig)
 }));
 app.use(passport.initialize());
 app.use(passport.session());

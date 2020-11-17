@@ -1,20 +1,10 @@
 const mysql = require('mysql');
 const { promisify } = require('util');
+const dbconfig = require('./dbconfig');
 
 //creo la conexion a bd
-const conexion = mysql.createPool({
-    host:'bjoraqzacwltasd8tins-mysql.services.clever-cloud.com',
-    user: 'udigwa8nmzk2vxqu',
-    password: 'xfm0bNCHhWd29s9dozOx',
-    database:'bjoraqzacwltasd8tins'
-});
+const conexion = mysql.createPool(dbconfig);
 
-/*const conexion = mysql.createPool({
-    host:'localhost',
-    user: 'root',
-    password: '19199697tsoCD',
-    database:'clinica'
-});*/
 
 //obtengo la conexion y valido los errores
 conexion.getConnection((err, connection)=>{
@@ -26,7 +16,7 @@ conexion.getConnection((err, connection)=>{
             console.error('');
         }
         if(err.code === 'ECONNREFUSED'){
-
+            console.error(err.code);
         }
     }
     //si no hay error y obtengo la conexion

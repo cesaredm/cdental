@@ -33,8 +33,6 @@ router.get('/logout',(req, res)=>{
 });
 //mostrar menu
 router.get('/menu',isLoggedIn,  async (req, res)=>{
-    /*let fecha = moment().format('YYYY-MM-DD');
-    const citas = await conexion.query("SELECT * FROM citas WHERE fecha = ? ORDER BY horaInicio",[fecha]);*/
     res.render('menu.html');
 });
 //mostrar citas
