@@ -221,6 +221,7 @@ document.getElementById('guardar-extracciones').addEventListener('submit',(e)=>{
     var anotaciones = document.getElementById('extraccion-anotaciones').value;
     var procesos = [extraccionQ,extraccionC,otros];
     guardarProceso(procesoPadre,procesos,diente,anotaciones);
+    document.getElementById('guardar-extracciones').reset();
 });
 
 //GUARDAR RESTAURACIONES
@@ -230,6 +231,7 @@ document.getElementById('guardar-restauraciones').addEventListener('submit',(e)=
     var posteNucleo = document.getElementById('poste-nucleo');
     var procesos = [posteNucleo];
     guardarProceso(procesoPadre,procesos,diente,'');
+    document.getElementById('guardar-restauraciones').reset();
 });
 
 //GUARDAR CORONAS
@@ -244,6 +246,7 @@ document.getElementById('guardar-coronas').addEventListener('submit',(e)=>{
     var procesoPadre = document.getElementById('corona').value;
     var procesos = [coronaMetal,coronaProvisional,zm,ze,emaxm,emaxe];
     guardarProceso(procesoPadre,procesos,diente,'');
+    document.getElementById('guardar-coronas').reset();
 });
 
 //GUARDAR CARILLAS
@@ -256,6 +259,7 @@ document.getElementById('guardar-carillas').addEventListener('submit',(e)=>{
     var procesos = [directaResina,laminadoCeramica,laminadoResina];
 
     guardarProceso(procesoPadre,procesos,diente,'');
+    document.getElementById('guardar-carillas').reset();
 });
 
 //GUARDAR IMPLANTES
@@ -267,6 +271,7 @@ document.getElementById('guardar-implantes').addEventListener('submit',(e)=>{
     var procesos = [implante];
 
     guardarProceso(procesoPadre,procesos,diente,anotaciones);
+    document.getElementById('guardar-implantes').reset();
 });
 
 //GUARDAR ENDODONCIAS
@@ -282,6 +287,7 @@ document.getElementById('guardar-endodoncias').addEventListener('submit',(e)=>{
     var procesos = [apicectomia,retratamiento,molarSuperior,molarInferior,anterior,preMolar];
 
     guardarProceso(procesoPadre,procesos,diente,'');
+    document.getElementById('guardar-endodoncias').reset();
 })
 
 //GUARDAR LIMPIEZA DENTAL
@@ -292,7 +298,7 @@ document.getElementById('guardar-limpieza').addEventListener('submit',(e)=>{
     var procesos = [limpieza];
 
     guardarProceso(procesoPadre,procesos,diente,'');
-
+    document.getElementById('guardar-limpieza').reset();
 
 });
 
@@ -308,7 +314,7 @@ document.getElementById('guardar-blanquiamientos').addEventListener('submit',(e)
     var procesos = [bInterno,bExterno,bOtros];
 
     guardarProceso(procesoPadre,procesos,diente,anotaciones);
-
+    document.getElementById('guardar-blanquiamientos').reset();
 })
 
 //GUARDAR PROTESIS
@@ -321,6 +327,7 @@ document.getElementById('guardar-protesis').addEventListener('submit',(e)=>{
     var anotaciones = document.getElementById('protesis-anotaciones').value;
     var procesos = [protesisCompleta,protesisPPR,otrasProtesis];
     guardarProceso(procesoPadre,procesos,diente,anotaciones);
+    document.getElementById('guardar-protesis').reset();
 });
 
 //GUARDAR RADIOGRAFIAS
@@ -454,7 +461,7 @@ document.getElementById('infoMedica').addEventListener('click',(e)=>{
     }
 });
 
-/*------------ LOGICA PARA GUARDAR LOS PROCESOS A LAS SUPERFICIES MOLARES SUPERIORES ---------*/
+/*------------ LOGICA PARA GUARDAR LOS PROCESOS A LAS SUPERFICIES ---------*/
 
 document.getElementById('form-resina-superficie-molar-superior').addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -571,10 +578,12 @@ document.getElementById('guardar-IResina-incisivos-inferior').addEventListener('
 });
 
 /* --------------------------------------------------------------------------------------------*/
+
 //limpiar formularios
 document.getElementById('close-modal-procesos').addEventListener('click',()=>{
     document.querySelector('.process').reset();
 })
+
 //LIMPIAR SUPERFICIES Y RAIZ
 document.getElementById('limpiarProcesos').addEventListener('click',()=>{
     limpiarSuperficies();
