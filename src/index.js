@@ -84,7 +84,7 @@ io.on('connect',async (socket)=>{
         await conexion.query("INSERT INTO citas set ?", [data]);
 
         let fechaActual = moment().format('YYYY-MM-DD');
-        const citas = await conexion.query(`SELECT c.id,c.nombres,c.apellidos,telefono,fecha,horaInicio,horaFinal,anotaciones,correo,d.nombres as nombresDentista,
+        const citas = await conexion.query(`SELECT c.id,c.nombres,c.apellidos,telefono,DATE_FORMAT(fecha,"%Y-%m-%d") as fecha,horaInicio,horaFinal,anotaciones,correo,d.nombres as nombresDentista,
                                             d.apellidos as apellidosDentista,color FROM citas AS c LEFT JOIN dentistas as d on(c.dentista=d.id) ORDER BY id DESC LIMIT 1`);//conexion.query("SELECT * FROM citas WHERE fecha = ? ORDER BY horaInicio", [fechaActual]);
         //socket emitiendo
         io.sockets.emit('cita:guardada',{
