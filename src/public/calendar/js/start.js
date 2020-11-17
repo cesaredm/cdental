@@ -3,7 +3,7 @@ window.onload = () => {
     showCitasDiagnostico();
     resolucion();
 };
-//inicializar con la hora y fecha local
+//inicializar con la hora y fecha
 moment().locale();
 //inicializacion de socketIO
 const socket = io();
@@ -218,8 +218,8 @@ function showCitas() {
             object = {
                 title: cita.nombres + " " + cita.apellidos + " -> " + cita.anotaciones +" : "+ "Dr. "+ cita.nombresDentista +" "+ cita.apellidosDentista,
                 text: cita.anotaciones,
-                start: `${moment(cita.fecha).format("YYYY-MM-DD")} ${cita.horaInicio}`,
-                end: moment(cita.fecha).format("YYYY-MM-DD") + " " + cita.horaFinal,
+                start: `${cita.fecha} ${cita.horaInicio}`,
+                end: cita.fecha + " " + cita.horaFinal,
                 id: cita.id,
                 nombres: cita.nombres,
                 apellidos: cita.apellidos,

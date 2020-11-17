@@ -39,7 +39,7 @@ router.get('/menu',isLoggedIn,  async (req, res)=>{
 router.get('/showCitas',isLoggedIn ,async (req,res)=>{
     try {
         const query = `
-        SELECT c.id,c.nombres,c.apellidos,telefono,fecha,horaInicio,horaFinal,anotaciones,correo,d.nombres as nombresDentista,
+        SELECT c.id,c.nombres,c.apellidos,telefono, DATE_FORMAT(fecha,"%Y-%m-%d") as fecha,horaInicio,horaFinal,anotaciones,correo,d.nombres as nombresDentista,
 	    d.apellidos as apellidosDentista,color FROM citas AS c LEFT JOIN dentistas as d on(c.dentista=d.id) `;
         const citas = await conexion.query(query);
         res.send(citas);
