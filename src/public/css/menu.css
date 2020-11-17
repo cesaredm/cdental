@@ -33,15 +33,11 @@ body{
     background-color: #0181b0;
 }
 .menuLateral{
-    /* background-color: #383838; */
     background-color: #47485a;
     position: fixed;
     width: 10%;
     height: 100%;
-    /* margin-top: 0.5%; */
-    /* margin-left: .5%; */
     margin-right: 0;
-    /* border-radius: 16px 16px; */
 }
 .menuLateral ul li .nav-link:hover{
     color: rgb(105, 151, 238);
@@ -62,17 +58,25 @@ body{
 .content-nav .user{
     width: 100%;
 }
+/* Logo de menu */
 .content-nav .icon-user{
+    margin: auto;
     display: block;
-    width: 100%;
+    width: 60%;
     font-size: 45px;
     text-align: center;
-    color: white;
+    background-color: #ecf0f3;
+    border: 5px solid #353642;
+    border-radius: 64px;
 }
+.content-nav .icon-user img{
+    width: 64px;
+    border-radius: 64px;
+}
+/* -------------------------------- */
 .menu{
     text-align: center;
     width: 100%;
-    /* margin-left: 3%; */
 }
 .menu li.active a{
     background-color: #414252; 

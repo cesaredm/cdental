@@ -4,6 +4,7 @@
         margin-left: -100%;
         margin-top: -5px;
         z-index: 2;
+        width: 20%;
     }
     .menuResponsive{
         display: block;
@@ -59,11 +60,23 @@
     #icon-add-expediente{
         margin-left: 86%;
     }
-    
+    .content-nav .icon-user{
+        margin: auto;
+        display: block;
+        width: 50%;
+        text-align: center;
+        background-color: #ecf0f3;
+        border: 5px solid #353642;
+        border-radius: 64px;
+    }
+    .content-nav .icon-user img{
+        width: 60px;
+        border-radius: 64px;
+    }
 }
 
 /* TELEFONO SMALL DE 320PX */
-@media (min-width:320px) and (max-width:425px){
+@media (min-width:320px) and (max-width:320px){
     .menuLateral{
         width: 40%;
     }
@@ -72,5 +85,41 @@
     }
     #citas{
         overflow-x: auto;
+    }
+    .content-nav .icon-user{
+        width: 60%;
+        border-radius: 64px;
+    }
+}
+/* TELEFONO MEDIO DE 375PX */
+@media (min-width:375px) and (max-width:375px){
+    .menuLateral{
+        width: 40%;
+    }
+    #menu-diagnostico{
+        display: none;
+    }
+    #citas{
+        overflow-x: auto;
+    }
+    .content-nav .icon-user{
+        width: 50%;
+        border-radius: 64px;
+    }
+}
+/* TELEFONO LARGE DE 425PX */
+@media (min-width:425px) and (max-width:425px){
+    .menuLateral{
+        width: 30%;
+    }
+    #menu-diagnostico{
+        display: none;
+    }
+    #citas{
+        overflow-x: auto;
+    }
+    .content-nav .icon-user{
+        width: 60%;
+        border-radius: 64px;
     }
 }
