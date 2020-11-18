@@ -70,14 +70,14 @@
                           </div>
                         </div>
                         <div class="col-8" id="content-subprocesos">
-                          <div class="tab-content text-center" id="v-pills-tabContent">
+                          <div class="tab-content text-justify p-4" id="v-pills-tabContent">
                             <!-- EXTRACCIONES LISTO-->
                             <div class="tab-pane fade show active" id="extracciones" role="tabpanel" aria-labelledby="v-pills-extracciones-tab">
                               <form action="" class="process" id="guardar-extracciones">
                                 <input type="hidden" name="" id="proceso" value="Extraccion">
-                                <div class="form-group"><input type="checkbox" value="Extracciòn convencional" name="" id="extraccion-convencional" class="form-check-input"><label for="">Extracción Convencional</label></div>
-                                <div class="form-group"><input type="checkbox" value="Extracciòn quirùrgica" name="" id="extraccion-quirurgica" class="form-check-input"><label for="">Extracción Quirúrgica</label></div>
-                                <div class="form-group"><input type="checkbox" value="Otras extraciones" name="" id="otras-extracciones" class="form-check-input"><label for="">Otros</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" value="Extracciòn convencional" name="" id="extraccion-convencional" class="custom-control-input"><label class="custom-control-label" for="extraccion-convencional">Extracción convencional</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" value="Extracciòn quirùrgica" name="" id="extraccion-quirurgica" class="custom-control-input"><label class="custom-control-label" for="extraccion-quirurgica">Extracción Quirúrgica</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" value="Otras extraciones" name="" id="otras-extracciones" class="custom-control-input"><label class="custom-control-label" for="otras-extracciones">Otros</label></div>
                                 <div class="form-group">
                                   <textarea name="" class="form-control" id="extraccion-anotaciones" cols="30" rows="5" placeholder="Anotaciones"></textarea>
                                 </div>
@@ -88,8 +88,8 @@
                             <div class="tab-pane fade" id="restauraciones" role="tabpanel" aria-labelledby="v-pills-restauraciones-tab">
                               <form action="" class="process" id="guardar-restauraciones">
                                 <input type="hidden" name="" id="restauracion" value="Restauración">
-                                <div class="form-group">
-                                  <input type="checkbox" name="" value="Poste y núcleo" class="form-check-input" id="poste-nucleo"><label for="">Poste y Núcleo</label>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" name="" value="Poste y núcleo" class="custom-control-input" id="poste-nucleo"><label class="custom-control-label" for="poste-nucleo">Poste y Núcleo</label>
                                 </div>
                                 <div class="form-group">
                                   <button class="btn btn-primary btn-sm btn-block">Agregar</button>
@@ -101,7 +101,7 @@
                               <form action="" class="process" id="guardar-limpieza">
                                 <div class="form-group">
                                   <input type="hidden" name="" id="proceso-limpieza-dental" value="Limpieza Dental">
-                                  <div class="form-group"><input type="checkbox" class="form-check-input" name="" id="limpieza-dental" value="Limpieza dental"><label for="">Limpieza dental</label></div>
+                                  <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" name="" id="limpieza-dental" value="Limpieza dental"><label class="custom-control-label" for="limpieza-dental">Limpieza dental</label></div>
                                   <div class="form-group">
                                     <button class="btn btn-primary btn-sm btn-block">Agregar</button>
                                   </div>
@@ -112,12 +112,12 @@
                             <div class="tab-pane fade" id="coronas" role="tabpanel" aria-labelledby="v-pills-coronas-tab">
                               <form action="" class="process" id="guardar-coronas">
                                 <input type="hidden" name="" id="corona" value="Corona">
-                                <div class="form-group"><input type="checkbox" class="form-check-input" name="" value="Corona metal Cerámica" id="corona-metal"><label for="">Corona Metal Cerámica</label></div>
-                                <div class="form-group"><input type="checkbox" class="form-check-input" name="" value="Corona provisional (PMMA)" id="corona-provisional"><label for="">Provisional (PMMA)</label></div>
-                                <div class="form-group"><input type="checkbox" name="" value="Corona zirconio monolitico" id="corona-monolitico" class="form-check-input"><label for="">Zirconio Monolitico</label></div>
-                                <div class="form-group"><input type="checkbox" name="" value="Corona zirconio estratificado" id="corona-estratificado" class="form-check-input"><label for="">Zirconio Estratificado</label></div>
-                                <div class="form-group"><input type="checkbox" name="" value="Corona e-max monolitico" id="corona-emax-monolitico" class="form-check-input"><label for="">E-Max Monolitico</label></div>
-                                <div class="form-group"><input type="checkbox" name="" value="Corona e-max estratificado" id="corona-emax-estratificado" class="form-check-input"><label for="">E-Max Estratificado</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" name="" value="Corona metal Cerámica" id="corona-metal"><label class="custom-control-label" for="corona-metal">Corona Metal Cerámica</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" name="" value="Corona provisional (PMMA)" id="corona-provisional"><label class="custom-control-label" for="corona-provisional">Provisional (PMMA)</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" value="Corona zirconio monolitico" id="corona-monolitico" class="custom-control-input"><label class="custom-control-label" for="corona-monolitico">Zirconio Monolitico</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" value="Corona zirconio estratificado" id="corona-estratificado" class="custom-control-input"><label class="custom-control-label" for="corona-estratificado">Zirconio Estratificado</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" value="Corona e-max monolitico" id="corona-emax-monolitico" class="custom-control-input"><label class="custom-control-label" for="corona-emax-monolitico">E-Max Monolitico</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" value="Corona e-max estratificado" id="corona-emax-estratificado" class="custom-control-input"><label class="custom-control-label" for="corona-emax-estratificado">E-Max Estratificado</label></div>
                                 <button class="btn btn-primary btn-sm btn-block">Agregar</button>
                               </form>
                             </div>
@@ -125,9 +125,9 @@
                             <div class="tab-pane fade" id="carillas" role="tabpanel" aria-labelledby="v-pills-carillas-tab">
                               <form action="" class="process" id="guardar-carillas">
                                 <input type="hidden" name="" id="carilla" value="Carilla">
-                                <div class="form-group"><input type="checkbox" name="" value="Carilla directa de resina" id="directa-resina" class="form-check-input"><label for=""></label>Directa de Resina</div>
-                                <div class="form-group"><input type="checkbox" name="" value="Carilla laminado de Cerámica" id="laminado-ceramica" class="form-check-input"><label for=""></label>Laminado de Cerámica</div>
-                                <div class="form-group"><input type="checkbox" name="" value="Carilla laminado de resina" id="laminado-resina" class="form-check-input"><label for=""></label>Laminado de Resina</div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" value="Carilla directa de resina" id="directa-resina" class="custom-control-input"><label class="custom-control-label" for="directa-resina"></label>Directa de Resina</div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" value="Carilla laminado de Cerámica" id="laminado-ceramica" class="custom-control-input"><label class="custom-control-label" for="laminado-ceramica"></label>Laminado de Cerámica</div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" value="Carilla laminado de resina" id="laminado-resina" class="custom-control-input"><label class="custom-control-label" for="laminado-resina"></label>Laminado de Resina</div>
                                 <div class="form-goup">
                                   <button class="btn btn-primary btn-sm btn-block">Agregar</button>
                                 </div>
@@ -137,7 +137,7 @@
                             <div class="tab-pane fade" id="implantes" role="tabpanel" aria-labelledby="v-pills-implantes-tab">
                               <form action="" id="guardar-implantes">
                                 <input type="hidden" name="" id="proceso-implantes" value="Implante">
-                                <div class="form-group"><input type="checkbox" value="Implante" name="" id="implante" class="form-check-input"><label for="">Implantes</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" value="Implante" name="" id="implante" class="custom-control-input"><label class="custom-control-label" for="implante">Implantes</label></div>
                                 <div class="form-group"><textarea name="" id="anotaciones-implante" cols="30" rows="5" class="form-control" placeholder="Anotaciones"></textarea></div>
                                 <div class="form-group">
                                   <button class="btn btn-primary btn-sm btn-block">Agregar</button>
@@ -148,9 +148,9 @@
                             <div class="tab-pane fade" id="blanquiamientos" role="tabpanel" aria-labelledby="v-pills-blanquiamienros-tab">
                               <form action="" class="process" id="guardar-blanquiamientos">
                                 <input type="hidden" name="" id="proceso-blanquiamientos" value="Blanquiamiento">
-                                <div class="form-group"><input type="checkbox" name="" id="b-interno" value="Blanquiamiento Interno" class="form-check-input"><label for="">Interno</label></div>
-                                <div class="form-group"><input type="checkbox" name="" id="b-externo" value="Blanquiamiento Externo" class="form-check-input"><label for="">Externo</label></div>
-                                <div class="form-group"><input type="checkbox" name="" id="b-otros" value="Otros Blanquiamientos" class="form-check-input"><label for="">Otros</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" id="b-interno" value="Blanquiamiento Interno" class="custom-control-input"><label class="custom-control-label" for="b-interno">Interno</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" id="b-externo" value="Blanquiamiento Externo" class="custom-control-input"><label class="custom-control-label" for="b-externo">Externo</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" id="b-otros" value="Otros Blanquiamientos" class="custom-control-input"><label class="custom-control-label" for="b-otros">Otros</label></div>
                                 <div class="form-group"><textarea name="" id="b-anotaciones" cols="30" rows="5" class="form-control" placeholder="Anotaciones"></textarea></div>
                                 <div class="form-group">
                                   <button class="btn btn-primary btn-sm btn-block">Agregar</button>
@@ -298,12 +298,12 @@
                             <div class="tab-pane fade" id="endodoncias" role="tabpanel" aria-labelledby="v-pills-endodoncias-tab">
                               <form action="" id="guardar-endodoncias">
                                 <input type="hidden" name="" id="proceso-endodoncia" value="Endodoncia">
-                                <div class="form-group"><input type="checkbox" value="Apicectomía" name="" id="endodoncia-apicectomia" class="form-check-input"><label for="">Apicectomía</label></div>
-                                <div class="form-group"><input type="checkbox" value="Retratamiento" name="" id="endodoncia-retratamiento" class="form-check-input"><label for="">Retratamiento</label></div>
-                                <div class="form-group"><input type="checkbox" value="Endodoncia" name="" id="endodoncia-molarSuperior" class="form-check-input"><label for="">Molar Superior</label></div>
-                                <div class="form-group"><input type="checkbox" value="Endodoncia" name="" id="endodoncia-molarInferior" class="form-check-input"><label for="">Molar Inferior</label></div>
-                                <div class="form-group"><input type="checkbox" value="Endodoncia" name="" id="endodoncia-anterior" class="form-check-input"><label for="">Anterior</label></div>
-                                <div class="form-group"><input type="checkbox" value="Endodoncia" name="" id="endodoncia-preMolar" class="form-check-input"><label for="">Pre-molar</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" value="Apicectomía" name="" id="endodoncia-apicectomia" class="custom-control-input"><label class="custom-control-label" for="endodoncia-apicectomia">Apicectomía</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" value="Retratamiento" name="" id="endodoncia-retratamiento" class="custom-control-input"><label class="custom-control-label" for="endodoncia-retratamiento">Retratamiento</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" value="Endodoncia" name="" id="endodoncia-molarSuperior" class="custom-control-input"><label class="custom-control-label" for="endodoncia-molarSuperior">Molar Superior</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" value="Endodoncia" name="" id="endodoncia-molarInferior" class="custom-control-input"><label class="custom-control-label" for="endodoncia-molarInferior">Molar Inferior</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" value="Endodoncia" name="" id="endodoncia-anterior" class="custom-control-input"><label class="custom-control-label" for="endodoncia-anterior">Anterior</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" value="Endodoncia" name="" id="endodoncia-preMolar" class="custom-control-input"><label class="custom-control-label" for="endodoncia-preMolar">Pre-molar</label></div>
                                 <div class="form-group">
                                   <button class="btn btn-primary btn-sm btn-block">Agregar</button>
                                 </div>
@@ -313,9 +313,9 @@
                             <div class="tab-pane fade" id="protesis" role="tabpanel" aria-labelledby="v-pills-protesis-tab">
                               <form action="" id="guardar-protesis">
                                 <input type="hidden" value="Protesis" id="proceso-protesis">
-                                <div class="form-group"><input type="checkbox" name="" value="Protesis completa" id="protesis-completa" class="form-check-input"><label for="">Completa</label></div>
-                                <div class="form-group"><input type="checkbox" name="" value="Protesis PPR" id="protesis-ppr" class="form-check-input"><label for="">PPR</label></div>
-                                <div class="form-group"><input type="checkbox" name="" value="Otras protesis" id="protesis-otros" class="form-check-input"><label for="">Otros</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" value="Protesis completa" id="protesis-completa" class="custom-control-input"><label class="custom-control-label" for="protesis-completa">Completa</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" value="Protesis PPR" id="protesis-ppr" class="custom-control-input"><label class="custom-control-label" for="protesis-ppr">PPR</label></div>
+                                <div class="custom-control custom-checkbox"><input type="checkbox" name="" value="Otras protesis" id="protesis-otros" class="custom-control-input"><label class="custom-control-label" for="protesis-otros">Otros</label></div>
                                 <div class="form-group">
                                   <textarea name="" class="form-control" id="protesis-anotaciones" cols="30" rows="5" placeholder="Anotaciones"></textarea>
                                 </div>

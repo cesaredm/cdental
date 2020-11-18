@@ -1,4 +1,3 @@
-
 var expediente = '';
 var idExpedienteInfo = '';
 var diente = '';
@@ -349,7 +348,7 @@ document.getElementById('guardar-c1').addEventListener('submit',(e)=>{
 
 document.getElementById('guardar-c2').addEventListener('submit',(e)=>{
     e.preventDefault();
-    var procesoPadre = document.getElementById('proceso-radiografiaC2').value;
+    var procesoPadre = document.getElementById('proceso-radiografiasC2').value;
     var d21 = document.getElementById('pieza21');
     var d22 = document.getElementById('pieza22');
     var d23 = document.getElementById('pieza23');
@@ -448,6 +447,7 @@ document.getElementById('infoMedica').addEventListener('click',(e)=>{
                     method:'POST',
                     body:JSON.stringify({id})
                 }).then(dato=>dato.text()).then(dato=>{
+                    limpiarSuperficies();
                     mostrarHistorialMedico();
                     mostrarGraficosOdontograma(expediente);
                     mostrarRestauraciones(expediente);
@@ -749,7 +749,7 @@ function mostrarGraficosOdontograma(expediente) {
                     });
                     ss.forEach(e=>{
                         if(proceso.diente == e){
-                            document.querySelector('#diente' + proceso.diente).innerHTML += `<img src="img/posteIncisivoSuperior.png" class="posteIncisivoSuperior" diente="raiz" id="${proceso.diente}" data-toggle="modal" data-target="#ingresoDiagnostico"/>`;
+                            document.querySelector('#diente' + proceso.diente).innerHTML += `<img src="img/posteSuperior.png" class="posteIncisivoSuperior" diente="raiz" id="${proceso.diente}" data-toggle="modal" data-target="#ingresoDiagnostico"/>`;
                         }
                     });
                 }break;
@@ -1302,6 +1302,7 @@ function guardarProceso(procesoPadre,procesos,diente,anotaciones) {
     }
 }
 
+//cerrra el modal que muestra la informacion personal y medica del expediente
 document.getElementById('close-modal-infoProcessExpediente').addEventListener('click',()=>{
     $('#infoProcessExpediente').hide();
 });
