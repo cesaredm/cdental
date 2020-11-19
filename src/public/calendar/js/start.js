@@ -164,6 +164,7 @@ socket.on('cita:update',(datos)=>{
         event.setExtendedProp('text',datos.datos.anotaciones);
         event.setExtendedProp('nombres',datos.datos.nombres);
         event.setExtendedProp('apellidos',datos.datos.apellidos);
+        event.setExtendedProp('correo',datos.datos.correo);
         event.setExtendedProp('dentista',datos.doctorCita[0].nombres +" "+datos.doctorCita[0].apellidos);
         event.setProp('color',datos.doctorCita[0].color);
         showCitasDiagnostico();
