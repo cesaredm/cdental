@@ -68,6 +68,8 @@ body{
     background-color: #ecf0f3;
     border: 5px solid #353642;
     border-radius: 64px;
+    box-shadow: 7px 7px 7px #292a33,
+                -7px -7px 7px #5e6174;
 }
 .content-nav .icon-user img{
     width: 64px;
@@ -134,7 +136,7 @@ body{
                 -8px -8px 8px #ffff;
     background-color: #ecf0f3;    
 }
-.btn-guardar-users, .btn-guardar-cita, .btn-guardar-expediente, .btn-guardar-proceso, .btn-guardar-dentista{
+.btn-guardar-users, .btn-guardar-cita, .btn-guardar-expediente, .btn-guardar-proceso, .btn-guardar-dentista, .btn-guardar-proceso{
     border-radius: 32px;
     box-shadow: 8px 8px 8px #cbced1,
                 -8px -8px 8px #ffff;
@@ -142,7 +144,7 @@ body{
 .searchExpediente .card-body{
     /* box-shadow: inset 8px 8px 8px #cbced1,
                 inset -8px -8px 8px #ffff; */
-    height: 200px;
+    height: 220px;
     overflow: auto;
 }
 .anotacionesProccess{

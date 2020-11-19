@@ -137,9 +137,13 @@ router.post('/updateUser',isLoggedIn,async(req,res)=>{
 })
 //llenar form citas para actualizar
 router.post('/editCita',isLoggedIn,async (req,res)=>{
-    const {id} = req.body;
-    const cita = await conexion.query("SELECT * FROM citas WHERE id = ?", [id]);
-    res.send(cita);
+    try {
+        const {id} = req.body;
+        const cita = await conexion.query('SELECT id,nombres,apellidos,telefono,DATE_FORMAT(fecha,"%Y-%m-%d") as fecha,horaInicio,horaFinal,anotaciones,dentista,correo FROM citas WHERE id = ?', [id]);
+        res.send(cita);
+    } catch (error) {
+        console.log(error);
+    }
 });
 //guardar dentistas
 router.post('/saveDentista',isLoggedIn,async(req,res)=>{

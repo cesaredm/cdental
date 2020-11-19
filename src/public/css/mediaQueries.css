@@ -73,8 +73,10 @@
         width: 60px;
         border-radius: 64px;
     }
+    .btnAgregarCita{
+        margin-left: 85%;
+    }
 }
-
 /* TELEFONO SMALL DE 320PX */
 @media (min-width:320px) and (max-width:320px){
     .menuLateral{
@@ -89,6 +91,9 @@
     .content-nav .icon-user{
         width: 60%;
         border-radius: 64px;
+    }
+    .btnAgregarCita{
+        margin-left: 75%;
     }
 }
 /* TELEFONO MEDIO DE 375PX */

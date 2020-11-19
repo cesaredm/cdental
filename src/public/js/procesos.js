@@ -1262,7 +1262,7 @@ function guardarProceso(procesoPadre,procesos,diente,anotaciones) {
 
         if(validar.length > 1){
             swal({
-                title:'Solo puede elejir una extraccion por pieza dental.',
+                title:'Solo puede elejir un procedimiento',
                 icon:'warning'
             });
         }else if(validar.length < 1){

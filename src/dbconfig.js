@@ -10,6 +10,6 @@ const config = {
     user: 'root',
     password: '19199697tsoCD',
     database:'clinica'
-};  */ 
+};*/  
 
 module.exports = config;

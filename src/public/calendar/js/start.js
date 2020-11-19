@@ -209,7 +209,7 @@ document.querySelector('#form-save-cita').addEventListener('submit', (e) => {
     accion = true;
     document.getElementById('btn-guardar-cita').innerHTML = '<span class="icon-floppy"></span>Guardar';
 })
-//TODO arreglar la conversion de fecha
+
 // mostrar las citas al entrar al sistema
 function showCitas() {
     fetch('/showCitas').then(citas => citas.json()).then(citas => {
@@ -309,7 +309,7 @@ document.addEventListener('click', (e) => {
             document.getElementById('nombres').value = cita[0].nombres;
             document.getElementById('apellidos').value = cita[0].apellidos;
             document.getElementById('telefono').value = cita[0].telefono;
-            document.getElementById('fecha').value = moment(cita[0].fecha).format('YYYY-MM-DD');
+            document.getElementById('fecha').value = cita[0].fecha;
             document.getElementById('horaInicio').value = cita[0].horaInicio;
             document.getElementById('horaFinal').value = cita[0].horaFinal;
             document.getElementById('dentistaCita').value = cita[0].dentista;
@@ -339,6 +339,6 @@ function resolucion() {
     var alto = screen.height;
 
     if(ancho === 425){
-        calendar.setOption('height', 500);
+        calendar.setOption('height', 400);
     }
 }

@@ -53,8 +53,8 @@ function mostrarUsers() {
                 <b>
                     ${usuario.usuario} <span class="icon-right-outline"/>
                 </b>
-                <button class="btn btn-success btn-sm" btn="editar-user">Editar</button>
-                <button class="btn btn-danger btn-sm" btn="borrar-user">Borrar</button>
+                <button class="btn btn-success btn-sm" btn="editar-user"><span class="icon-edit"/>Editar</button>
+                <button class="btn btn-danger btn-sm" btn="borrar-user"><span class="icon-trash-empty"/>Borrar</button>
             </a>
             `;
         });
