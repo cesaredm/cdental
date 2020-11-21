@@ -203,10 +203,6 @@ socket.on('update:estado',(message)=>{
     showCitasDiagnostico();
 });
 
-//mostrar citas para hoy
-document.getElementById('mostrar-citas-para-hoy').addEventListener('click',()=>{
-    showCitas
-});
 
 // guardar o actualizar citas
 document.querySelector('#form-save-cita').addEventListener('submit', (e) => {

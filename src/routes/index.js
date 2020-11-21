@@ -10,7 +10,7 @@ const nodemailer = require('nodemailer');
 const {isLoggedIn, isNotLoggedIn} = require('../lib/auth');//para validar si esta logueado o no "isLoggedIn"
 
 
-moment.locale();
+//moment.locale();
 
 
 //login
