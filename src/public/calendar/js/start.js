@@ -239,8 +239,6 @@ function showCitas() {
 // funcion para mostrar citas en diagnostico
 function showCitasDiagnostico() {
     fecha = moment().format('YYYY-MM-DD');
-    fecha1 = moment().format('YYYY-MM-DD, h:mm:ss a');
-    console.log(fecha1);
     fetch('/showCitasDiagnostico',{
         headers:{
             'Content-Type':'application/json'
@@ -275,8 +273,7 @@ function showCitasDiagnostico() {
                     </div>
                 </div>
             </div>`;
-        })
-        console.log(template);
+        });
         document.getElementById('list-citas-diagnostico').innerHTML = template;
     });
 
