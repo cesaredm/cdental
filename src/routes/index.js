@@ -48,10 +48,9 @@ router.get('/showCitas',isLoggedIn ,async (req,res)=>{
     }
 })
 //mostrar citas en diagnostico
-router.get('/showCitasDiagnostico', isLoggedIn ,async (req,res)=>{
+router.post('/showCitasDiagnostico', isLoggedIn ,async (req,res)=>{
     try {
-        var fecha = moment().format("YYYY-MM-DD, h:mm:ss a");
-        console.log(fecha);
+        const {fecha} = req.body;
         var query = `SELECT c.id,c.nombres,c.apellidos,telefono,fecha,horaInicio,horaFinal,anotaciones,d.nombres
                          as nombresDentista,
                             d.apellidos as apellidosDentista,color 

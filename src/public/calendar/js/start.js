@@ -238,7 +238,16 @@ function showCitas() {
 
 // funcion para mostrar citas en diagnostico
 function showCitasDiagnostico() {
-    fetch('/showCitasDiagnostico').then(citas => citas.json()).then(citas => {
+    fecha = moment().format('YYYY-MM-DD');
+    fecha1 = moment().format('YYYY-MM-DD, h:mm:ss a');
+    console.log(fecha1);
+    fetch('/showCitasDiagnostico',{
+        headers:{
+            'Content-Type':'application/json'
+        },
+        method:'POST',
+        body:JSON.stringify({fecha})
+    }).then(citas => citas.json()).then(citas => {
         var template = '';
         citas.forEach(cita => {
             //funcion de crear expediente en users.js
@@ -267,6 +276,7 @@ function showCitasDiagnostico() {
                 </div>
             </div>`;
         })
+        console.log(template);
         document.getElementById('list-citas-diagnostico').innerHTML = template;
     });
 
