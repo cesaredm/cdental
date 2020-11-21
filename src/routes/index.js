@@ -10,7 +10,7 @@ const nodemailer = require('nodemailer');
 const {isLoggedIn, isNotLoggedIn} = require('../lib/auth');//para validar si esta logueado o no "isLoggedIn"
 
 
-moment.locale('es');
+moment.locale();
 
 
 //login
@@ -50,7 +50,8 @@ router.get('/showCitas',isLoggedIn ,async (req,res)=>{
 //mostrar citas en diagnostico
 router.get('/showCitasDiagnostico', isLoggedIn ,async (req,res)=>{
     try {
-        var fecha = moment().format("YYYY-MM-DD");
+        var fecha = moment().format("YYYY-MM-DD, h:mm:ss a");
+        console.log(fecha);
         var query = `SELECT c.id,c.nombres,c.apellidos,telefono,fecha,horaInicio,horaFinal,anotaciones,d.nombres
                          as nombresDentista,
                             d.apellidos as apellidosDentista,color 
