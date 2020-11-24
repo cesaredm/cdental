@@ -3,10 +3,88 @@ var idExpedienteInfo = '';
 var diente = '';
 var procesoDiente = '';
 var nombreProceso = '';
+var accion = true;
 
 $('#infoProcessExpediente').hide();
 
 
+//guardar o actualizar expediente
+document.getElementById('form-save-expediente').addEventListener('submit',(e)=>{
+    e.preventDefault();
+    var b;
+    var formulario = document.getElementById('form-save-expediente');
+    var datos = new FormData(formulario);
+    if(accion){
+        fetch('/saveExpediente',{
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method:'POST',
+            body:JSON.stringify({
+                nombres:datos.get('nombres'),
+                apellidos:datos.get('apellidos'),
+                telefono:datos.get('telefono'),
+                sexo:datos.get('sexo'),
+                edad:datos.get('edad'),
+                nacionalidad:datos.get('nacionalidad'),
+                fecha:datos.get('fecha'),
+                anotaciones:datos.get('anotaciones')
+            })
+        })
+            .then(expedientes=>expedientes.json())
+            .then(expedientes=>{
+                idExpedienteInfo = expedientes[0].id;
+                expediente = expedientes[0].id;
+                var nombres = expedientes[0].nombres;
+                var apellidos = expedientes[0].apellidos;
+                formulario.reset();
+                $('#ingresoExpediente').modal('toggle');
+                $('.diente span').text('');
+                mostrarGraficosOdontograma(expediente);
+                mostrarRestauraciones(expediente);
+                document.getElementById('titulo-dentadura').innerHTML = `${nombres} ${apellidos}`;
+                mostrarInfoExpediente(idExpedienteInfo)
+                $('#infoProcessExpediente').show();
+                mostrarHistorialMedico();
+                swal({
+                    title:"Expediente guardado exitosamente.",
+                    icon:'success'
+                });
+            });
+    }else{
+        fetch('/updateExpediente',{
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method:'POST',
+            body:JSON.stringify({
+                id:datos.get('id'),
+                nombres:datos.get('nombres'),
+                apellidos:datos.get('apellidos'),
+                telefono:datos.get('telefono'),
+                sexo:datos.get('sexo'),
+                edad:datos.get('edad'),
+                nacionalidad:datos.get('nacionalidad'),
+                fecha:datos.get('fecha'),
+                anotaciones:datos.get('anotaciones')
+            })
+        })
+            .then(expedientes=>expedientes.text())
+            .then(expedientes=>{
+                formulario.reset();
+                swal({
+                    title:expedientes,
+                    icon:'success'
+                });
+                //showExpedientes();
+                accion = true;
+                document.getElementById('btn-guardar-expediente').innerHTML = '<span class="icon-floppy"></span> Guardar';
+                b = document.getElementById('buscarExp').value;
+                buscarExp(b);
+            });
+    }
+
+});
 
 //quitar acentos o tildes a cadenas de texto
 const removeAccents = (str) => {
@@ -82,14 +160,24 @@ function limpiarSuperficies() {
 // MOSTRAR INFORMACION DE EXPEDIENTE
 document.addEventListener('click', (e) => {
     var accion = e.target.getAttribute('accion');
-    if (accion == 'exp') {
+    if(accion === 'exp'){
         idExpedienteInfo = e.target.getAttribute('id');
+        expediente = e.target.getAttribute('id');
+        mostrarInfoExpediente(idExpedienteInfo);
+        mostrarHistorialMedico();
+        $('#infoProcessExpediente').show();
+    }
+
+});
+
+//MOSTRAR INFORMACION PERSONAL DE PACIENTE "EXPEDIENTE"
+function mostrarInfoExpediente(id){
         fetch('/infoExpediente', {
             headers: {
                 'Content-Type': 'application/json'
             },
             method: 'POST',
-            body: JSON.stringify({idExpedienteInfo})
+            body: JSON.stringify({'idExpedienteInfo':id})
         }).then(info => info.json()).then(info => {
             var template = `
             <div class="card-body" id="${info[0].id}" nombre="${info[0].nombres}" apellido="${info[0].apellidos}">
@@ -99,31 +187,31 @@ document.addEventListener('click', (e) => {
                         <div>
                             <span class="font-weight-bold">Nombres:</span>
                             <p class="p-2 border">${
-                    info[0].nombres
-                }</p>
+                info[0].nombres
+            }</p>
                         </div>
                         <!-- apellidos -->
                         <div>
                             <span class="font-weight-bold">Apellidos:</span>
                             <p class="p-2 border">${
-                    info[0].apellidos
-                }</p>
+                info[0].apellidos
+            }</p>
                         </div>
                         <!-- telefono -->
                         <div>
                             <span class="font-weight-bold">
                                 Telefono:</span>
                             <p class="p-2 border">${
-                    info[0].telefono
-                }</p>
+                info[0].telefono
+            }</p>
                         </div>
                         <!-- sexo -->
                         <div>
                             <span class="font-weight-bold">
                                 Sexo:</span>
                             <p class="p-2 border">${
-                    info[0].sexo
-                }</p>
+                info[0].sexo
+            }</p>
                         </div>
                     </div>
                     <div
@@ -133,8 +221,8 @@ document.addEventListener('click', (e) => {
                             <span class="font-weight-bold">
                                 Edad:</span>
                             <p class="p-2 border">${
-                    info[0].edad
-                }</p>
+                info[0].edad
+            }</p>
                         </div>
                         <!-- Nacionalidad -->
                         <div>
@@ -172,9 +260,7 @@ document.addEventListener('click', (e) => {
             $('#infoProcessExpediente').show();
             //$('#modal-info-expediente').modal();
         });
-
-    }
-})
+}
 
 // click para addDiagnostico al expediente
 document.addEventListener('click', (e) => {
@@ -188,7 +274,6 @@ document.addEventListener('click', (e) => {
         $('.diente span').text('');
         mostrarGraficosOdontograma(expediente);
         mostrarRestauraciones(expediente);
-        $('#modal-info-expediente').modal('toggle');
         document.getElementById('titulo-dentadura').innerHTML = `${nombres} ${apellidos}`;
         $('#infoProcessExpediente').show();
         mostrarHistorialMedico();

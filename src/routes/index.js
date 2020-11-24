@@ -12,7 +12,6 @@ const {isLoggedIn, isNotLoggedIn} = require('../lib/auth');//para validar si est
 
 //moment.locale();
 
-
 //login
 router.get('/',isNotLoggedIn ,(req, res)=>{
     res.render('index.html');
@@ -219,9 +218,11 @@ router.post('/llenarExpediente',isLoggedIn,async (req,res)=>{
 //guardar expediente
 router.post('/saveExpediente',isLoggedIn, async (req,res)=>{
     const {nombres, apellidos, telefono, sexo, edad, nacionalidad, fecha,anotaciones} = req.body;
+    let idNewExpediente;
     try {
         await conexion.query("INSERT INTO expediente set ?", [{nombres, apellidos, telefono, sexo, edad, nacionalidad, fecha,anotaciones}]);
-        res.send('Expediente guardado exitosamente.');
+        idNewExpediente = await conexion.query("SELECT id, nombres, apellidos FROM expediente ORDER BY id DESC LIMIT 1");
+        res.send(idNewExpediente);
     } catch (error) {
         console.log(error);
     }

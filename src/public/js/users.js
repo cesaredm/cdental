@@ -85,7 +85,8 @@ document.addEventListener('click',(e)=>{
                 document.getElementById('apellidosExpediente').value = datos[0].apellidos;
                 document.getElementById('telefonoExpediente').value = datos[0].telefono;
         });
-    }else if(elemento === 'editar-user'){
+    }
+    else if(elemento === 'editar-user'){
         //editar usuarios
         let id = e.target.parentElement.getAttribute('id');
         accion = false;
@@ -105,7 +106,8 @@ document.addEventListener('click',(e)=>{
             document.getElementById('password').value = datos[0].password;
             btn.innerHTML = '<span class="icon-arrows-cw"></span> Actualizar';
         });
-    }else if(elemento === 'borrar-user'){
+    }
+    else if(elemento === 'borrar-user'){
         //borrar usuarios
         let id = e.target.parentElement.getAttribute('id');
         swal({

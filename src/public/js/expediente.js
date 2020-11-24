@@ -1,75 +1,4 @@
-/*$(document).ready(function(){
-    showExpedientes();
-});*/
-
 var accion = true;
-
-//guardar o actualizar expediente
-document.getElementById('form-save-expediente').addEventListener('submit',(e)=>{
-    e.preventDefault();
-    var b;
-    var formulario = document.getElementById('form-save-expediente');
-    var datos = new FormData(formulario);
-    if(accion){
-        fetch('/saveExpediente',{
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            method:'POST',
-            body:JSON.stringify({
-                nombres:datos.get('nombres'),
-                apellidos:datos.get('apellidos'),
-                telefono:datos.get('telefono'),
-                sexo:datos.get('sexo'),
-                edad:datos.get('edad'),
-                nacionalidad:datos.get('nacionalidad'),
-                fecha:datos.get('fecha'),
-                anotaciones:datos.get('anotaciones')
-            })
-        })
-        .then(expedientes=>expedientes.text())
-        .then(expedientes=>{
-            formulario.reset();
-            swal({
-                title:expedientes,
-                icon:'success'
-            });
-            //showExpedientes()
-        });
-    }else{
-        fetch('/updateExpediente',{
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            method:'POST',
-            body:JSON.stringify({
-                id:datos.get('id'),
-                nombres:datos.get('nombres'),
-                apellidos:datos.get('apellidos'),
-                telefono:datos.get('telefono'),
-                sexo:datos.get('sexo'),
-                edad:datos.get('edad'),
-                nacionalidad:datos.get('nacionalidad'),
-                fecha:datos.get('fecha'),
-                anotaciones:datos.get('anotaciones')
-            })
-        })
-        .then(expedientes=>expedientes.text())
-        .then(expedientes=>{
-            formulario.reset();
-            swal({
-                title:expedientes,
-                icon:'success'
-            });
-            //showExpedientes();
-            accion = true;
-            document.getElementById('btn-guardar-expediente').innerHTML = '<span class="icon-floppy"></span> Guardar';
-            b = document.getElementById('buscarExp').value;
-            buscarExp(b);
-        });
-    }
-    
-})
 
 //mostrar expedientes
 function showExpedientes() {
@@ -81,7 +10,7 @@ function showExpedientes() {
         expedientes.forEach(expediente=>{
             template += `
                 <a href="#" class="list-group-item list-group-item-action font-weight-bold" id="${expediente.id}" accion="exp">
-                    ${expediente.nombres} ${expediente.apellidos}<span class="icon-right-outline"/> ${expediente.edad} años
+                    ${expediente.nombres} ${expediente.apellidos}<span class="icon-right-outline" id="${expediente.id}"/> ${expediente.edad} años
                 <a>
             `;
         });
@@ -100,6 +29,7 @@ document.getElementById('buscarExp').addEventListener('keyup', ()=>{
     }
 })
 
+//modal para la busqueda de expediente en tableta
 document.getElementById('buscarExpModal').addEventListener('keyup',()=>{
     var dato = document.getElementById('buscarExpModal').value;
     //buscar solo si el input tiene contenido
@@ -109,7 +39,6 @@ document.getElementById('buscarExpModal').addEventListener('keyup',()=>{
         document.getElementById('listaExpedientesModal').innerHTML = '';
     }
 });
-
 
 //borrar y editar
 document.getElementById('infoExpediente').addEventListener('click',(e)=>{
