@@ -200,7 +200,7 @@ function mostrarInfoExpediente(id){
                         <!-- telefono -->
                         <div>
                             <span class="font-weight-bold">
-                                Telefono:</span>
+                                Teléfono:</span>
                             <p class="p-2 border">${
                 info[0].telefono
             }</p>
@@ -233,7 +233,7 @@ function mostrarInfoExpediente(id){
                         <!-- Fecha -->
                         <div>
                             <span class="font-weight-bold">
-                                Fecha de Creacion:</span>
+                                Fecha de creación:</span>
                             <p class="p-2 border">${moment(info[0].fecha).format('DD-MMM-YYYY')}</p>
                         </div>
                         <!-- anotaciones -->
