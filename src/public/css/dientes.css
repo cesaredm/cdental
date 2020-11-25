@@ -2,13 +2,13 @@
 .btnAgregarCita{
     position: fixed;
     top: 86%;
-    margin-left: 80%;
+    margin-left: 82%;
     z-index: 2;
 }
 #icon-add-expediente{
     position: fixed;
     top: 86%;
-    margin-left: 77%;
+    margin-left: 79%;
     z-index: 2;
 }
 .iconProceso{

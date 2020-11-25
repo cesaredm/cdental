@@ -9,7 +9,7 @@ function showExpedientes() {
 
         expedientes.forEach(expediente=>{
             template += `
-                <a href="#" class="list-group-item list-group-item-action font-weight-bold" id="${expediente.id}" accion="exp">
+                <a href="#" class="list-group-item list-group-item-action font-weight-bold" id="${expediente.id}" accion="exp" name="${expediente.nombres} ${expediente.apellidos}">
                     ${expediente.nombres} ${expediente.apellidos}<span class="icon-right-outline" id="${expediente.id}"/> ${expediente.edad} años
                 <a>
             `;
@@ -116,8 +116,8 @@ function buscarExp(dato) {
 
         exps.forEach(expediente=>{
             template += `
-                <a href="#" class="list-group-item list-group-item-action font-weight-bold" id="${expediente.id}" accion="exp">
-                    ${expediente.nombres} ${expediente.apellidos}<span class="icon-right-outline"/> ${expediente.edad} años
+                <a href="#" class="list-group-item list-group-item-action font-weight-bold" id="${expediente.id}" accion="exp" name="${expediente.nombres} ${expediente.apellidos}">
+                    ${expediente.nombres} ${expediente.apellidos}<span class="icon-right-outline" accion="exp" id="${expediente.id}" name="${expediente.nombres} ${expediente.apellidos}"/> ${expediente.edad} años
                 </a>
             `;
         });

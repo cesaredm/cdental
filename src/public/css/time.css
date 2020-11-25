@@ -1,0 +1,40 @@
+/* ocultar controles de input  time */
+/*input[type="time"]::-webkit-inner-spin-button,
+::-webkit-calendar-picker-indicator,
+::-webkit-datetime-edit{
+    display: none;
+}*/
+
+/* mostrar el horas al hacer click */
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: block;
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+/* mostrar el calendario al hacer click */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block;
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+/* mostrar la fecha seleccionada al estar en hover */
+/*input[type="time"]:hover::-webkit-datetime-edit {
+    display: block;
+}*/

@@ -158,16 +158,22 @@ function limpiarSuperficies() {
 }
 
 // MOSTRAR INFORMACION DE EXPEDIENTE
-document.addEventListener('click', (e) => {
+document.getElementById('listaExpedientes').addEventListener('click', (e) => {
     var accion = e.target.getAttribute('accion');
+    var header = document.getElementById('titulo-dentadura');
+    var nombre;
     if(accion === 'exp'){
+        nombre = e.target.getAttribute('name');
         idExpedienteInfo = e.target.getAttribute('id');
         expediente = e.target.getAttribute('id');
         mostrarInfoExpediente(idExpedienteInfo);
         mostrarHistorialMedico();
         $('#infoProcessExpediente').show();
+        limpiarSuperficies();
+        header.innerHTML = nombre;
+        mostrarRestauraciones(expediente);
+        mostrarGraficosOdontograma(expediente);
     }
-
 });
 
 //MOSTRAR INFORMACION PERSONAL DE PACIENTE "EXPEDIENTE"
@@ -248,7 +254,6 @@ function mostrarInfoExpediente(id){
                 <div class="col-12">
                     <!-- div para los botones -->
                     <div class="text-right">
-                        <button class="btn btn-primary btn-sm" btn="btn-addDiagnostico">Add Diagnostico</button>
                         <button class="btn btn-info btn-sm" btn="btn-editar-expediente">Editar</button>
                         <button class="btn btn-danger btn-sm" btn="btn-borrar-expediente">Borrar</button>
                     </div>
@@ -262,23 +267,6 @@ function mostrarInfoExpediente(id){
         });
 }
 
-// click para addDiagnostico al expediente
-document.addEventListener('click', (e) => {
-    var btn = e.target.getAttribute('btn');
-    var elemento; 
-    if (btn === 'btn-addDiagnostico') {
-        limpiarSuperficies();
-        expediente = e.target.parentElement.parentElement.parentElement.parentElement.getAttribute('id');
-        var nombres = e.target.parentElement.parentElement.parentElement.parentElement.getAttribute('nombre');
-        var apellidos = e.target.parentElement.parentElement.parentElement.parentElement.getAttribute('apellido');
-        $('.diente span').text('');
-        mostrarGraficosOdontograma(expediente);
-        mostrarRestauraciones(expediente);
-        document.getElementById('titulo-dentadura').innerHTML = `${nombres} ${apellidos}`;
-        $('#infoProcessExpediente').show();
-        mostrarHistorialMedico();
-    }
-});
 
 // click al diente para agregar el id de diente a la variable diente (cuerpo de la card de la dentadura)
 document.getElementById('cardDientes').addEventListener('click', (e) => {

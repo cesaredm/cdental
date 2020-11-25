@@ -24,14 +24,17 @@ document.addEventListener('DOMContentLoaded', function () {
         initialView: 'dayGridMonth',
         eventColor:'sky',
         eventBackgroundColor:'white',
-        eventTextColor:'black',
+        eventTextColor:'white',
         eventBorderColor:'sky',
+        slotDuration:'00:10:00',
+        slotEventOverlap:false,
+        nowIndicator:true,
         // ordenamiento de los elementos del encabezado del calendario
         headerToolbar: {
             left: 'prev,next today',
             center: 'title',
             // right: 'dayGridMonth,timeGridWeek,timeGridDay'
-            right: 'dayGridMonth,dayGridWeek,dayGrid,listWeek'
+            right: 'dayGridMonth,dayGridWeek,timeGridWeek,dayGrid,listWeek'
         },
         themeSystem: 'bootstrap',
         editable:false,
@@ -43,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
             week: 'Semana',
             day: 'Dia',
             list: 'Lista',
-            dayGrid:'Dia'
+            dayGrid:'Dia',
+            timeGridWeek:'semana hora',
         },
         //titulo de los dias staticos al dar scroll
         stickyHeaderDates: true,
@@ -120,6 +124,8 @@ document.addEventListener('DOMContentLoaded', function () {
     calendar.render();
 });
 
+$("#calendar").css("font-size", "1.2em");
+
 // recolectar datos de la cita y guardarla en la base de datos
 function datosCitas() {
     var formulario = document.getElementById('form-save-cita');
@@ -157,7 +163,7 @@ socket.on('cita:update',(datos)=>{
         //obtengo el evento segun el id
         var event = calendar.getEventById(id);
         //establezco los valores al evento
-        event.setProp('title',datos.datos.nombres + " " +datos.datos.apellidos + " ->" + datos.datos.anotaciones +" : "+"Dr. "+ datos.doctorCita[0].nombres+" "+datos.doctorCita[0].apellidos);
+        event.setProp('title',datos.datos.nombres + " " +datos.datos.apellidos + " ⟹ " + datos.datos.anotaciones +" : "+"Dr. "+ datos.doctorCita[0].nombres+" "+datos.doctorCita[0].apellidos);
         event.setStart(datos.datos.fecha + " " + datos.datos.horaInicio);
         event.setEnd(datos.datos.fecha + " " + datos.datos.horaFinal);
         event.setExtendedProp('telefono',datos.datos.telefono);
@@ -175,7 +181,7 @@ socket.on('cita:guardada', (citas) => {
     var object;
     citas.citas.forEach(cita => {
         object = {
-            title: cita.nombres + " " + cita.apellidos + " ->" + cita.anotaciones +" : "+ "Dr. "+ cita.nombresDentista +" "+ cita.apellidosDentista,
+            title: cita.nombres + " " + cita.apellidos + " ⟹ " + cita.anotaciones +" : "+ "Dr. "+ cita.nombresDentista +" "+ cita.apellidosDentista,
             text: cita.anotaciones,
             start: `${cita.fecha} ${cita.horaInicio}`,
             end: cita.fecha + " " + cita.horaFinal,
@@ -218,7 +224,7 @@ function showCitas() {
         var object;
         citas.forEach(cita => {
             object = {
-                title: cita.nombres + " " + cita.apellidos + " -> " + cita.anotaciones +" : "+ "Dr. "+ cita.nombresDentista +" "+ cita.apellidosDentista,
+                title: cita.nombres + " " + cita.apellidos + " ⟹ " + cita.anotaciones +" : "+ "Dr. "+ cita.nombresDentista +" "+ cita.apellidosDentista,
                 text: cita.anotaciones,
                 start: `${cita.fecha} ${cita.horaInicio}`,
                 end: cita.fecha + " " + cita.horaFinal,
